@@ -1,0 +1,4 @@
+<div class="main-component">
+  <p>Child Component Position: {{ childComponentPosition }}</p>
+  <app-rectangle (childComponentPositionEmit)="onChildComponentChangedPosition($event)"></app-rectangle>
+</div>

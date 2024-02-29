@@ -1,0 +1,15 @@
+<div class="login">
+  <form (submit)="login()" [formGroup]="loginForm">
+    <p>Login Form</p>
+    <div class="form-inputs">
+      <input [class.invalid]="authErrors$ | async" formControlName="login" type="text" placeholder="login">
+      <input [class.invalid]="authErrors$ | async" formControlName="password" type="password" placeholder="password">
+    </div>
+    <div *ngIf="authErrors$ | async" class="form-alert">
+      <p>Неверный логин или пароль!</p>
+    </div>
+    <div class="form-actions">
+      <button [disabled]="!loginForm.valid" type="submit">Login</button>
+    </div>
+  </form>
+</div>

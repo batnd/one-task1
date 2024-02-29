@@ -1,0 +1,40 @@
+@use "src/assets/styles/_variables.scss" as *;
+
+.footer {
+  height: 100px;
+  width: 100%;
+  background-color: $main-color;
+  box-sizing: border-box;
+  padding: 10px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  nav {
+    height: 100%;
+    display: flex;
+
+    ul {
+      display: flex;
+      align-items: center;
+      column-gap: 40px;
+
+      li {
+        list-style: none;
+
+        a {
+          font-family: "IBM PlexSans", sans-serif;
+          font-weight: 600;
+          color: white;
+          font-size: 20px;
+          text-decoration: none;
+          transition: opacity 0.3s ease;
+
+          &:hover {
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
+}

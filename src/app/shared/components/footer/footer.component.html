@@ -1,0 +1,23 @@
+<footer class="footer">
+  <nav>
+    <ul>
+      <li>
+        <a routerLink="/">Home</a>
+      </li>
+      <ng-container *ngIf="authStatus$ | async">
+        <li>
+          <a routerLink="news">News</a>
+        </li>
+        <li>
+          <a routerLink="entertainment">Entertainment</a>
+        </li>
+        <li>
+          <a routerLink="profile">Profile</a>
+        </li>
+        <li>
+          <a routerLink="about">About</a>
+        </li>
+      </ng-container>
+    </ul>
+  </nav>
+</footer>

@@ -1,0 +1,40 @@
+@use "src/assets/styles/_variables.scss" as *;
+
+.header {
+  height: 70px;
+  width: 100%;
+  background-color: $main-color;
+  box-sizing: border-box;
+  padding: 10px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  nav {
+    height: 100%;
+    display: flex;
+
+    ul {
+      display: flex;
+      align-items: center;
+
+      li {
+        list-style: none;
+
+        a {
+          font-family: "IBM PlexSans", sans-serif;
+          font-weight: 600;
+          color: white;
+          font-size: 20px;
+          text-decoration: none;
+          transition: opacity 0.3s ease;
+          cursor: pointer;
+
+          &:hover {
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
+}

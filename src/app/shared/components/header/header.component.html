@@ -1,0 +1,12 @@
+<header class="header">
+  <nav>
+    <ul>
+      <li *ngIf="!(authStatus$ | async)">
+        <a routerLink="login">Login</a>
+      </li>
+      <li *ngIf="authStatus$ | async">
+        <a (click)="logout()">Logout</a>
+      </li>
+    </ul>
+  </nav>
+</header>
