@@ -1,0 +1,21 @@
+<div class="react-forms">
+  <div class="react-forms-content">
+    <form [formGroup]="form">
+      <div class="form-inputs">
+        <input [class.invalid]="nameControl.invalid && nameControl.dirty" formControlName="name" type="text" placeholder="Имя-Фамилия">
+        <input [class.invalid]="phoneControl.invalid && phoneControl.dirty" formControlName="phone" type="text" placeholder="Телефон">
+        <input [class.invalid]="emailControl.invalid && emailControl.dirty" formControlName="email" type="text" placeholder="E-mail">
+        <div formArrayName="interests" class="form-inputs-dynamic">
+          <div *ngFor="let interest of interests.controls; let i = index">
+            <input [class.invalid]="isInterestControlInvalid(i)" class="input-interest" [formControlName]="i" type="text" placeholder="Интерес">
+            <button class="interest-remove" type="button" (click)="removeInterest(i)">X</button>
+          </div>
+        </div>
+      </div>
+      <div class="form-actions">
+        <button (click)="addInterestField()">Добавить интерес</button>
+        <button (click)="save()">Сохранить</button>
+      </div>
+    </form>
+  </div>
+</div>

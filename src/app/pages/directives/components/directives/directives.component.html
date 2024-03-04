@@ -1,0 +1,16 @@
+<div class="directives">
+  <div class="directives-content">
+    <div class="input-actions" [formGroup]="inputForm">
+      <input formControlName="input" type="text">
+      <div class="input-messages">
+        <p class="invalid" *ngIf="inputForm.invalid">Спецсимволы запрещены</p>
+        <p class="simple" *ngIf="onlySimpleNumbers()">Вы ввели просто число</p>
+        <p class="comp" *ngIf="onlyCompNumbers()">Вы ввели составное число</p>
+      </div>
+      <button (click)="save()">Сохранить</button>
+    </div>
+    <div class="input-values">
+      <p *ngFor="let res of results; let i=index">{{ i + 1 }}: {{ res | colorize }}</p>
+    </div>
+  </div>
+</div>

@@ -33,6 +33,14 @@ export const routes: Routes = [
     canActivate: [authGuard]
   },
   {
+    path: 'directives',
+    loadComponent: () => import('@pages/directives/components/directives/directives.component').then(c => c.DirectivesComponent),
+  },
+  {
+    path: 'reactive-forms',
+    loadComponent: () => import('@pages/reactive-forms/components/reactive-forms/reactive-forms.component').then(c => c.ReactiveFormsComponent),
+  },
+  {
     path: '**',
     redirectTo: ''
   }

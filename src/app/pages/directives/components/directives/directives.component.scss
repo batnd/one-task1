@@ -1,0 +1,55 @@
+.directives {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .directives-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    min-height: 250px;
+
+    .input-actions {
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px;
+      align-items: center;
+
+      input {
+        padding: 10px;
+        box-sizing: border-box;
+      }
+      div.input-messages {
+        height: 30px;
+
+        p {
+          font-size: 12px;
+
+          &.simple {
+            color: blue;
+          }
+
+          &.comp {
+            color: green;
+          }
+
+          &.invalid {
+            color: red;
+          }
+        }
+      }
+
+
+      button {
+        width: 100%;
+      }
+    }
+
+    .input-values {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
